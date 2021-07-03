@@ -1,9 +1,15 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container px-4 pt-16 mx-auto">
+
+<!----- Hero section --------------->
+
+
+        
+
+    <div class="container px-4 mx-auto">
         <div class="popular-movies">
-            <h2 class="text-lg font-semibold tracking-wider text-orange-500 uppercase">Popular Movies</h2>
+            <h2 class="text-2xl font-bold tracking-wider text-white uppercase">Trending <span class="text-redish"> Movies </span></h2>
             <div class="grid gap-8 gap-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 <div class="mt-8">
                         <a href="">
@@ -215,6 +221,17 @@
 </div>
 </div>
 
-
+<footer class="container px-4 pt-12 mx-auto">
+    <div class="flex flex-col items-center">
+        
+            <h1>FUNBOX</h1> 
+       
+       
+        <div class="flex search-movie">
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+    
+</footer>
     
 @endsection
