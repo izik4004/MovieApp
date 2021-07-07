@@ -1,6 +1,6 @@
  
                 <div class="mt-8">
-                    <a href="">
+                    <a href="{{ route('movies.show', $popularMovie['id']) }}">
                         <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$popularMovie['poster_path'] }}" alt="poster" class="transition duration-150 ease-in-out hover:opacity-75">
                     </a>
                 <div class="mt-2">

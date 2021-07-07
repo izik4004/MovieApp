@@ -42,7 +42,7 @@ module.exports = {
       },
       colors: {
         redish: '#DD0710',
-        yellow: colors.amber,
+        yellow: 'colors.amber',
       }
     },
   },
