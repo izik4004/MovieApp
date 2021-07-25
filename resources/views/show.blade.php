@@ -1,8 +1,13 @@
 @extends('layouts.layout1')
 
 @section('content')
+
+
     <div class="border-b border-gray-800 movie-info">
-   
+        <div class="flex justify-center  md:mx-auto">
+            <iframe src="https://www.2embed.ru/embed/tmdb/movie?id={{ $movie['id'] }}" frameborder=”1″ scrolling=”yes” allowfullscreen=”allowfullscreen” width="1280" height="720"></iframe> 
+        </div>
+       
         <div class="container flex flex-col px-4 py-16 mx-auto md:flex-row">
             
             <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$movie['poster_path'] }}" alt="poster" class="w-64 md:w-96">
@@ -26,7 +31,7 @@
                 </p>
                 
    
-                    <iframe src="https://www.2embed.ru/embed/tmdb/movie?id={{ $movie['id'] }}" frameborder=”1″ scrolling=”no” allowfullscreen=”allowfullscreen” class="max-w-full" > 
+                  
               
                    
                 
