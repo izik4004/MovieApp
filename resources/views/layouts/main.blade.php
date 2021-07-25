@@ -7,15 +7,19 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <livewire:styles />
        
         <!-- Styles -->
     </head>
-    <body class="font-sans text-white bg-black" >
+    <body class="w-full mx-auto font-sans text-white bg-black" >
         <section class="bg-right bg-cover bg-opacity-5" style="background-image: url({{ asset('img/joker.jpg') }})">
         <nav class="bg-gradient-to-l from-black to gray-900" >
             <div class="container flex items-center justify-between px-4 py-6 mx-auto md:flex-row">
                 <ul class="flex items-center md:flex-row">
                     <a href="{{ route('movies.index') }}" class="text-5xl font-bold text-redish">FUNBOX</a>
+                    <div class="flex items-center">
+                      <livewire:search-dropdown>
+                      </div>
                     <li class="md:ml-24">
                         <a href="#" class="pb-2 text-lg border-b-2 border-redish hover:text-gray-300">Movies</a>
                     </li>
@@ -23,20 +27,19 @@
                         <a href="#" class="text-lg hover:text-gray-300">Series</a>
                     </li>
                     <li class="md:ml-12">
-                        <a href="#" class="text-lg hover:text-gray-300">Trending</a>
-                    </li>
-                    <li class="md:ml-12">
-                        <a href="#" class="text-lg hover:text-gray-300">Theatre</a>
+                        <a href="#" class="text-lg hover:text-gray-300">Animation</a>
                     </li>
                 </ul>
-               
+              
             </div>
         </nav>
 
+      
 
         <!-----Herosection --->
         
         @yield('content')
+        <livewire:scripts />
     </body>
 
     <div class="bg-black border-t-2 border-gray-900">

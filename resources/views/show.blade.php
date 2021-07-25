@@ -2,7 +2,9 @@
 
 @section('content')
     <div class="border-b border-gray-800 movie-info">
+   
         <div class="container flex flex-col px-4 py-16 mx-auto md:flex-row">
+            
             <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$movie['poster_path'] }}" alt="poster" class="w-64 md:w-96">
             <div class="md:ml-24">
                 <h2 class="text-4xl font semi-bold">{{ $movie['title'] }}</h2>
@@ -22,7 +24,12 @@
                 <p class="mt-8 text-gray-300">
                    {{ $movie ['overview']}}
                 </p>
-
+                
+   
+                    <iframe src="https://www.2embed.ru/embed/tmdb/movie?id={{ $movie['id'] }}" frameborder=”1″ scrolling=”no” allowfullscreen=”allowfullscreen” class="max-w-full" > 
+              
+                   
+                
                 <div class="mt-12">
                     <h4 class="font-semibold text-white">Featured Cast</h4>
                     <div class="flex mt-4">

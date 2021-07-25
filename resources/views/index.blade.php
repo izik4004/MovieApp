@@ -33,12 +33,17 @@
     <div class="container mx-auto mt-24">
         <div class="popular-movies">
             <h2 class="text-2xl font-bold tracking-wider text-white uppercase">Popular <span class="text-redish"> Movies </span></h2>
-            <div class="grid gap-8 gap-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">
+            <div class="grid gap-8 gap-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 @foreach ($popularMovies as $popularMovie)
                     <x-movie-card :popularMovie="$popularMovie" :genres="$genres"/>
                 @endforeach        
             </div>
         </div>
+        <div class="flex mt-4 justify-items-center">
+            <button class="px-4 py-2 mx-auto text-sm text-white border-2 border-red-500 hover:bg-red-600">View More</button>
+        </div>
+
+
     <!----end of Popular Movies ----->
 
     <!-------Now Playing Section -------------->
@@ -47,13 +52,9 @@
             <div class="grid gap-8 gap-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 @foreach ($nowPlayingMovies as $popularMovie)
                 <x-movie-card :popularMovie="$popularMovie" :genres="$genres"/> 
-                @endforeach
-              
-           
-       
-       
+                @endforeach         
+             </div>
+        </div>
     </div>
-</div>
-</div>
 
 @endsection

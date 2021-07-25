@@ -1,5 +1,5 @@
  
-                <div class="mt-8">
+                <div class="mt-8 transition duration-300 transform hover:scale-125">
                     <a href="{{ route('movies.show', $popularMovie['id']) }}">
                         <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$popularMovie['poster_path'] }}" alt="poster" class="transition duration-150 ease-in-out hover:opacity-75">
                     </a>
@@ -19,5 +19,8 @@
                             {{ $genres->get($genre) }}@if (!$loop->last), @endif
                         @endforeach
                     </div>
+                   
+                    
+               
                 </div>
             </div>   
